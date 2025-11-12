@@ -12,8 +12,6 @@ const ResponsiveNav = () => {
 
   const closeNavHandler = () => {
     setShowNav(false);
-    console.log('关闭导航栏', showNav);
-    
   }
 
   return (
