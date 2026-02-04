@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Provider from "@/components/HOC/Provider";
+import ResponseNav from "@/components/Navbar/ResponseNav";
 
 export const metadata: Metadata = {
   title: "李觊的项目集",
@@ -18,6 +19,7 @@ export default function RootLayout({
         className={`antialiased`}
       >
         <Provider>
+          <ResponseNav />
           {children}
         </Provider>
       </body>
