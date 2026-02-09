@@ -32,7 +32,7 @@ export const highlights = [
   { icon: MapPin, text: "现居：武汉" },
   { icon: Briefcase, text: "接受武汉坐班或远程工作" },
   { icon: GraduationCap, text: "本科（非全日制）" },
-  { icon: Crosshair, text: "结果导向" },
+  { icon: Crosshair, text: "全栈开发" },
 ];
 
 export const userReviewData = [
@@ -211,7 +211,7 @@ export const projects = [
 
 export const skillCategories = [
   {
-    title: "Frontend",
+    title: "前端",
     skills: [
       { name: "React", icon: Code2 },
       { name: "Next.js", icon: Globe },
@@ -222,7 +222,7 @@ export const skillCategories = [
     ],
   },
   {
-    title: "Backend",
+    title: "后端",
     skills: [
       { name: "Node.js", icon: Server },
       { name: "Express", icon: Layers },
@@ -233,7 +233,7 @@ export const skillCategories = [
     ],
   },
   {
-    title: "Tools & Others",
+    title: "工具",
     skills: [
       { name: "Git", icon: GitBranch },
       { name: "Docker", icon: Server },
