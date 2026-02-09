@@ -25,11 +25,13 @@ export default function Hero() {
         <div className="text-xl sm:text-2xl md:text-3xl text-black dark:text-white font-semibold mb-4 sm:mb-8 h-12">
           <TypeAnimation
             sequence={[
-              "TypeScript 全栈开发",
+              "会前端、懂后端的全栈开发",
               2000,
-              "擅长前端 React、Next.js、Vue.js",
+              "做过SaaS系统",
               2000,
-              "擅长后端 Node.js、Express、Hono.js、Elysia.js",
+              "做过APP应用开发",
+              2000,
+              "做过独立站",
               2000,
             ]}
             wrapper="span"
