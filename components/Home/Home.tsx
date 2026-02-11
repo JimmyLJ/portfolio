@@ -3,6 +3,7 @@ import About from "../About/About";
 import Skills from "../Skills/Skills";
 import Project from "../Project/Project";
 import Experience from "../Experience/Experience";
+import Contact from "../Contact/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Project />
       <Experience />
+      <Contact />
     </div>
   );
 }
