@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Provider from "@/components/Contexts/Provider";
 import ResponseNav from "@/components/Navbar/ResponseNav";
+import Footer from "@/components/Footer/Footer";
+import ScrollToTop from "@/components/Helper/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "李觊的项目集",
@@ -19,6 +21,8 @@ export default function RootLayout({
         <Provider>
           <ResponseNav />
           {children}
+          <Footer />
+          <ScrollToTop />
         </Provider>
       </body>
     </html>
