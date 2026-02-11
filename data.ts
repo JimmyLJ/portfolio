@@ -39,35 +39,31 @@ export const highlights = [
 export const contactInfo = [
   {
     icon: Mail,
-    label: "Email",
-    value: "hello@johndoe.dev",
-    href: "mailto:hello@johndoe.dev",
+    label: "邮箱",
+    value: "liji420@qq.com",
+    href: "mailto:liji420@qq.com",
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    label: "电话/微信",
+    value: "186 7406 0420",
+    href: "tel:+8618674060420",
   },
   {
     icon: MapPin,
-    label: "Location",
-    value: "San Francisco, CA",
+    label: "位置",
+    value: "武汉市",
     href: "#",
   },
 ];
 
 export const socialLinks = [
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 
 export const footerSocialLinks = [
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
   { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
 ];
 

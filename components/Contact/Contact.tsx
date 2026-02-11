@@ -1,11 +1,29 @@
+"use client";
+
+import { useActionState, useRef, useEffect } from "react";
 import { contactInfo, socialLinks } from "../../data";
 import SectionHeading from "../Helper/SectionHeading";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { Send } from "lucide-react";
+import { Send, Loader2, CheckCircle2, XCircle } from "lucide-react";
+import { sendMessage, type ContactFormState } from "../../app/actions/contact";
 
 export default function Contact() {
+  const [state, formAction, isPending] = useActionState<
+    ContactFormState,
+    FormData
+  >(sendMessage, null);
+
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // 发送成功后清空表单
+  useEffect(() => {
+    if (state?.success) {
+      formRef.current?.reset();
+    }
+  }, [state]);
+
   return (
     <div className="py-16 bg-gray-100 dark:bg-gray-950">
       <SectionHeading
@@ -18,10 +36,9 @@ export default function Contact() {
           {/* 联系信息 */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">Let&apos;s talk</h3>
+              <h3 className="text-2xl font-semibold mb-4">聊聊吧</h3>
               <p className="text-muted-foreground">
-                I&apos;m always open to discussing new projects, creative ideas,
-                or opportunities to be part of your vision.
+                我非常乐意探讨各种项目合作与创意点子。如果您正在寻找一位能够理解您的愿景、并将其转化为现实的合作伙伴，欢迎随时联系我。
               </p>
             </div>
 
@@ -49,7 +66,7 @@ export default function Contact() {
             </div>
             {/* 社交网络icon */}
             <div>
-              <h4 className="text-lg font-medium mb-4">Follow Me</h4>
+              <h4 className="text-lg font-medium mb-4">关注我</h4>
               <div className="flex gap-3">
                 {socialLinks.map((link) => {
                   return (
@@ -68,65 +85,103 @@ export default function Contact() {
           </div>
           {/* 联系表单 */}
           <div>
-            <form className="bg-white dark:bg-gray-800 rounded-2xl p-8 space-y-6">
+            <form
+              ref={formRef}
+              action={formAction}
+              className="bg-white dark:bg-gray-800 rounded-2xl p-8 space-y-6"
+            >
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Name
+                    姓名
                   </label>
                   <Input
                     id="name"
                     name="name"
-                    placeholder="John Smith"
+                    placeholder="您的姓名"
                     required
+                    disabled={isPending}
                     className="bg-gray-100"
                   />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email
+                    邮箱地址
                   </label>
                   <Input
                     id="email"
                     name="email"
-                    placeholder="john@example.com"
+                    type="email"
+                    placeholder="yourname@example.com"
                     required
+                    disabled={isPending}
                     className="bg-gray-100"
                   />
                 </div>
               </div>
               <div className="space-y-2">
                 <label htmlFor="subject" className="text-sm font-medium">
-                  Subject
+                  主题
                 </label>
                 <Input
                   id="subject"
                   name="subject"
-                  placeholder="Project Inquiry"
+                  placeholder="项目咨询"
                   required
+                  disabled={isPending}
                   className="bg-gray-100"
                 />
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Message
+                  留言内容
                 </label>
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Tell me about your project...."
+                  placeholder="请描述您的需求或想对我说的话..."
                   rows={5}
                   required
+                  disabled={isPending}
                   className="bg-gray-100 h-40"
                 />
               </div>
+
+              {/* 状态提示 */}
+              {state && (
+                <div
+                  className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
+                    state.success
+                      ? "bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400"
+                      : "bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400"
+                  }`}
+                >
+                  {state.success ? (
+                    <CheckCircle2 className="w-4 h-4 shrink-0" />
+                  ) : (
+                    <XCircle className="w-4 h-4 shrink-0" />
+                  )}
+                  {state.message}
+                </div>
+              )}
+
               <Button
                 type="submit"
                 size={"lg"}
+                disabled={isPending}
                 className="w-full cursor-pointer"
               >
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
+                {isPending ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    正在发送...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    发送消息
+                  </>
+                )}
               </Button>
             </form>
           </div>
