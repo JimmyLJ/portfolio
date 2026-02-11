@@ -13,7 +13,12 @@ export default function About() {
       />
       <div className="grid w-[80%] mx-auto lg:grid-cols-2 gap-12 items-center">
         {/* 照片 */}
-        <div className="relative">
+        <div
+          data-aos="fade-right"
+          data-aos-delay="0"
+          data-aos-anchor-placement="top-center"
+          className="relative"
+        >
           <div className="aspect-square rounded-2xl overflow-hidden p-2">
             <Image
               src={"/images/user.jpg"}
@@ -25,7 +30,12 @@ export default function About() {
           </div>
         </div>
         {/* 内容 */}
-        <div className="space-y-6">
+        <div
+          data-aos="fade-left"
+          data-aos-delay="150"
+          data-aos-anchor-placement="top-center"
+          className="space-y-6"
+        >
           <h3 className="text-2xl font-semibold">
             一位以结果为导向的全栈开发工程师
           </h3>
@@ -60,6 +70,9 @@ export default function About() {
           {stats.map((stat) => {
             return (
               <div
+                data-aos="zoom-in"
+                data-aos-delay="100"
+                data-aos-anchor-placement="top-center"
                 key={stat.label}
                 className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center"
               >

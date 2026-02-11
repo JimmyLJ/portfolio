@@ -34,8 +34,12 @@ export default function Contact() {
       <div className="w-[80%] mx-auto mt-16">
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* 联系信息 */}
-          <div className="space-y-8">
-            <div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-anchor-placement="top-center"
+          >
+            <div className="space-y-8">
               <h3 className="text-2xl font-semibold mb-4">聊聊吧</h3>
               <p className="text-muted-foreground">
                 我非常乐意探讨各种项目合作与创意点子。如果您正在寻找一位能够理解您的愿景、并将其转化为现实的合作伙伴，欢迎随时联系我。
@@ -84,7 +88,11 @@ export default function Contact() {
             </div>
           </div>
           {/* 联系表单 */}
-          <div>
+          <div
+            data-aos="fade-left"
+            data-aos-delay="150"
+            data-aos-anchor-placement="top-center"
+          >
             <form
               ref={formRef}
               action={formAction}

@@ -11,19 +11,27 @@ export default function Hero() {
       {/* 内容 */}
       <div className="relative z-10 text-center">
         {/* 子标题 */}
-        <div className="sm:mb-6">
+        <div data-aos="fade-up" className="sm:mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-gray-600 text-sm text-muted-foreground dark:text-gray-200 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
             正在看机会
           </span>
         </div>
         {/* 标题 */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+        <h1
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+        >
           你好,我是{" "}
           <span className="text-purple-800 dark:text-yellow-300">李觊</span>
         </h1>
         {/* 打字机效果 */}
-        <div className="text-xl sm:text-2xl md:text-3xl text-black dark:text-white font-semibold mb-4 sm:mb-8 h-12">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="text-xl sm:text-2xl md:text-3xl text-black dark:text-white font-semibold mb-4 sm:mb-8 h-12"
+        >
           <TypeAnimation
             sequence={[
               "会前端、懂后端的全栈开发",
@@ -41,12 +49,20 @@ export default function Hero() {
           />
         </div>
         {/* 描述 */}
-        <p className="text-lg text-muted-foreground dark:text-gray-200 max-w-2xl mx-auto mb-10">
+        <p
+          data-aos="fade-up"
+          data-aos-delay="300"
+          className="text-lg text-muted-foreground dark:text-gray-200 max-w-2xl mx-auto mb-10"
+        >
           全栈开发专家 |
           深耕现代技术栈，匠心打造卓越数字体验。具备极强的工程实践能力，确保项目从需求到交付的高质量落地。
         </p>
         {/* 按钮 */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="400"
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
           <Button size={"lg"} asChild className="w-fit mx-auto sm:mx-0">
             <a href="#_">
               <FaGithub className="w-5 h-5 mr-2" />

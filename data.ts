@@ -20,7 +20,7 @@ import {
   Flame
 } from "lucide-react";
 
-import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 
 export const stats = [
   { label: "年经验", value: "10+" },
@@ -58,13 +58,13 @@ export const contactInfo = [
 ];
 
 export const socialLinks = [
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
+  { icon: FaGithub, href: "https://github.com/JimmyLJ", label: "GitHub" },
 ];
 
 
 export const footerSocialLinks = [
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: FaGithub, href: "https://github.com/JimmyLJ", label: "GitHub" },
+  { icon: Mail, href: "mailto:liji420@qq.com", label: "Email" },
 ];
 
 export const skillCategories = [
@@ -129,7 +129,7 @@ export const experiences = [
   {
     type: "work",
     title: "高级前端开发工程师",
-    company: "武汉仙视软件信息科技有限公司",
+    company: "武汉仙视软件信息科技有限公司(CVTE子公司)",
     period: "2021 - 2024",
     description:
       "主导连锁门店数字标牌 SaaS 系统的低代码平台研发；基于 Fabric.js 实现可视化节目编辑器，集成叫号、支付及 RBAC 权限体系，实现节目从设计到多终端发布的闭环流程。",
