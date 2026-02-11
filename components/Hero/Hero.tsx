@@ -2,7 +2,8 @@
 
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "../ui/button";
-import { FolderOpen, Download } from "lucide-react";
+import { Download } from "lucide-react";
+import { FaGithub } from "react-icons/fa6";
 
 export default function Hero() {
   return (
@@ -48,7 +49,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size={"lg"} asChild className="w-fit mx-auto sm:mx-0">
             <a href="#_">
-              <FolderOpen className="w-5 h-5 mr-2" />
+              <FaGithub className="w-5 h-5 mr-2" />
               查看项目
             </a>
           </Button>

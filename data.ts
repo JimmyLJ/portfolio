@@ -36,41 +36,6 @@ export const highlights = [
   { icon: Crosshair, text: "全栈开发" },
 ];
 
-export const userReviewData = [
-  {
-    id: 1,
-    name: "John Doe",
-    profession: "Real Estate Agent",
-    userImage: "/images/u1.jpg",
-    review:
-      "A wonderful experience! The platform made it easy to find exactly what I needed. lorem ipsum dolor sit ame",
-  },
-  {
-    id: 2,
-    name: "Mike Smith",
-    profession: "Business Owner",
-    userImage: "/images/u2.jpg",
-    review:
-      "Great selection of properties and seamless process. Highly recommended for anyone looking to invest.",
-  },
-  {
-    id: 3,
-    name: "Alex Johnson",
-    profession: "Web developer",
-    userImage: "/images/u3.jpg",
-    review:
-      "The website helped me find my dream home quickly and hassle-free. Exceptional service!",
-  },
-  {
-    id: 4,
-    name: "Emily Clark",
-    profession: "Interior Designer",
-    userImage: "/images/u4.jpg",
-    review:
-      "Fantastic range of properties with clear details. The best platform for home and design inspiration!",
-  },
-];
-
 export const contactInfo = [
   {
     icon: Mail,
@@ -98,53 +63,6 @@ export const socialLinks = [
   { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
-export const experiences = [
-  {
-    type: "work",
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Inc.",
-    period: "2022 - Present",
-    description:
-      "Leading development of enterprise SaaS products. Mentoring junior developers and implementing best practices.",
-    technologies: ["React", "Node.js", "AWS", "TypeScript"],
-  },
-  {
-    type: "work",
-    title: "Full-Stack Developer",
-    company: "StartupXYZ",
-    period: "2020 - 2022",
-    description:
-      "Built and maintained multiple web applications. Collaborated with design team to implement responsive UIs.",
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-  },
-  {
-    type: "education",
-    title: "Master of Computer Science",
-    company: "Stanford University",
-    period: "2018 - 2020",
-    description:
-      "Specialized in distributed systems and machine learning. Thesis on scalable microservices architecture.",
-    technologies: ["Research", "AI/ML", "Distributed Systems"],
-  },
-  {
-    type: "work",
-    title: "Junior Developer",
-    company: "WebAgency Co.",
-    period: "2018 - 2020",
-    description:
-      "Developed client websites and e-commerce platforms. Gained experience in agile methodologies.",
-    technologies: ["JavaScript", "PHP", "MySQL", "WordPress"],
-  },
-  {
-    type: "education",
-    title: "Bachelor of Computer Science",
-    company: "UC Berkeley",
-    period: "2014 - 2018",
-    description:
-      "Strong foundation in algorithms, data structures, and software engineering principles.",
-    technologies: ["Computer Science", "Mathematics", "Problem Solving"],
-  },
-];
 
 export const footerSocialLinks = [
   { icon: FaGithub, href: "https://github.com", label: "GitHub" },
@@ -198,6 +116,64 @@ export const projects = [
     techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
     demoUrl: "/",
     githubUrl: "https://github.com/JimmyLJ/portfolio",
+  },
+];
+
+
+export const experiences = [
+  {
+    type: "work",
+    title: "个人接单",
+    company: "自由职业",
+    period: "2024 - 现在",
+    description:
+      "自由职业期间利用 AI 编程工具链，高效完成几个全栈产品的设计开发与落地。",
+    technologies: ["React", "Vue", "Hono", "PostgreSQL", "阿里云", "AI Coding"],
+  },
+  {
+    type: "work",
+    title: "高级前端开发工程师",
+    company: "武汉仙视软件信息科技有限公司",
+    period: "2021 - 2024",
+    description:
+      "主导连锁门店数字标牌 SaaS 系统的低代码平台研发；基于 Fabric.js 实现可视化节目编辑器，集成叫号、支付及 RBAC 权限体系，实现节目从设计到多终端发布的闭环流程。",
+    technologies: [ "低代码", "Vue.js", "Fabric.js", "Canvas", "RBAC"],
+  },
+  {
+    type: "work",
+    title: "全栈开发工程师",
+    company: "辅辰科技（湖北）有限公司",
+    period: "2019 - 2021",
+    description:
+      "负责建筑 SaaS 系统前后端研发，实现核心业务闭环；主导跨端技术落地，保障复杂工程管理场景的高效交付。",
+    technologies: ["React", "Next.js", "Node.js", "RESTful API"],
+  },
+  {
+    type: "work",
+    title: "前端开发工程师",
+    company: "和思易科技（武汉）有限责任公司",
+    period: "2017 - 2019",
+    description:
+      "主导官网及跨端 APP 开发，负责从 jQuery 到 React 生态的技术架构迁移，成功交付多个定制化项目。",
+    technologies: ["React", "React Native", "jQuery", "HTML/CSS/JS"],
+  },
+  {
+    type: "work",
+    title: "移动端开发工程师",
+    company: "泛微网络科技股份有限公司",
+    period: "2014 - 2016",
+    description:
+      "负责泛微 OA 移动端研发与迭代，优化本地数据库性能，保障企业级应用稳定运行。",
+    technologies: ["Java", "Android", "SQLite", "OA系统"],
+  },
+  {
+    type: "education",
+    title: "电子信息工程本科（非全日制）",
+    company: "湖北大学",
+    period: "2010 - 2014",
+    description:
+      "建立起从底层硬件到软件逻辑的系统性认知，培养了严谨的工程实践能力与问题分析能力。",
+    technologies: ["C语言", "电路", "硬件"],
   },
 ];
 
