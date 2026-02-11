@@ -17,6 +17,7 @@ import {
   Server,
   Smartphone,
   Terminal,
+  Flame
 } from "lucide-react";
 
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
@@ -152,63 +153,6 @@ export const footerSocialLinks = [
   { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
 ];
 
-export const projects = [
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
-    image: "/images/p1.jpg",
-    techStack: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "Collaborative project management tool with real-time updates, Kanban boards, and team analytics.",
-    image: "/images/p2.jpg",
-    techStack: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "GPT-powered content creation platform for marketers with templates and workflow automation.",
-    image: "/images/p3.jpg",
-    techStack: ["React", "Python", "OpenAI", "FastAPI"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Real Estate Platform",
-    description:
-      "Property listing platform with virtual tours, mortgage calculator, and agent booking system.",
-    image: "/images/p4.jpg",
-    techStack: ["Vue.js", "Node.js", "MongoDB", "Maps API"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Fitness Tracker",
-    description:
-      "Cross-platform mobile app for workout tracking, nutrition logging, and progress analytics.",
-    image: "/images/p5.jpg",
-    techStack: ["React Native", "Firebase", "Node.js", "Charts"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Learning Management System",
-    description:
-      "Educational platform with video streaming, quizzes, progress tracking, and certificates.",
-    image: "/images/p6.jpg",
-    techStack: ["Next.js", "Prisma", "AWS S3", "Stripe"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-];
-
 export const skillCategories = [
   {
     title: "前端",
@@ -226,9 +170,9 @@ export const skillCategories = [
     skills: [
       { name: "Node.js", icon: Server },
       { name: "Express", icon: Layers },
-      { name: "MongoDB", icon: Database },
+      { name: "Hono", icon: Flame },
+      { name: "Elysia", icon: Layers },
       { name: "PostgreSQL", icon: Database },
-      { name: "GraphQL", icon: Cpu },
       { name: "REST APIs", icon: Cloud },
     ],
   },
@@ -237,10 +181,24 @@ export const skillCategories = [
     skills: [
       { name: "Git", icon: GitBranch },
       { name: "Docker", icon: Server },
-      { name: "AWS", icon: Cloud },
+      { name: "阿里云", icon: Cloud },
       { name: "Linux", icon: Terminal },
       { name: "Figma", icon: Palette },
       { name: "CI/CD", icon: Cpu },
     ],
   },
 ];
+
+export const projects = [
+  {
+    title: "作品集网站",
+    description:
+      "使用 Next.js 开发的一个作品集网站，展示我的技能和项目。",
+    image: "/images/p1.jpg",
+    techStack: ["Next.js", "TypeScript", "React", "Tailwind CSS"],
+    demoUrl: "/",
+    githubUrl: "https://github.com/JimmyLJ/portfolio",
+  },
+];
+
+
