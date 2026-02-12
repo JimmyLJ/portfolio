@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function Project() {
   return (
-    <div className="py-16 bg-gray-100 dark:bg-gray-900">
+    <div id="projects" className="py-16 bg-gray-100 dark:bg-gray-900">
       <SectionHeading
         title_1="案例"
         title_2="项目"

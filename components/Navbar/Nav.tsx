@@ -2,10 +2,10 @@
 
 import { Navlinks } from "@/Constant/Constant";
 import Logo from "../Helper/Logo";
-import Link from "next/link";
 import { DownloadIcon, MenuIcon } from "lucide-react";
 import ThemeToggler from "../Helper/ThemeToggler";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import AOS from "aos";
 
 type Props = {
   openNav: () => void;
@@ -13,6 +13,22 @@ type Props = {
 
 export default function Nav({ openNav }: Props) {
   const [navBg, setNavBg] = useState(false);
+
+  const handleNavClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth" });
+        // 滚动完成后刷新 AOS，确保动画正确触发
+        setTimeout(() => {
+          AOS.refresh();
+        }, 800);
+      }
+    },
+    [],
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,19 +54,21 @@ export default function Nav({ openNav }: Props) {
         {/* 导航链接 */}
         <div className="hidden lg:flex items-center space-x-10">
           {Navlinks.map((link, index) => (
-            <Link
-              className="dark:text-white text-black hover:text-yellow-500 dark:hover:text-yellow-200 font-semibold transition-all duration-200"
+            <a
+              className="dark:text-white text-black hover:text-yellow-500 dark:hover:text-yellow-200 font-semibold transition-all duration-200 cursor-pointer"
               key={index}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </div>
         <div className="flex items-center space-x-4">
           {/* 下载简历 */}
           <a
-            href="#_"
+            href="/liji_fullstack_CV.pdf"
+            download="李觊-全栈开发工程师.pdf"
             className="box-border
             relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-offset-gray-200 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
           >

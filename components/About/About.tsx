@@ -4,7 +4,7 @@ import { highlights, stats } from "@/data";
 
 export default function About() {
   return (
-    <div className="py-16 bg-gray-100 dark:bg-gray-900">
+    <div id="about" className="py-16 bg-gray-100 dark:bg-gray-900">
       {/* 区域标题 */}
       <SectionHeading
         title_1="关于"
@@ -71,7 +71,7 @@ export default function About() {
             return (
               <div
                 data-aos="zoom-in"
-                data-aos-delay="100"
+                data-aos-delay="150"
                 data-aos-anchor-placement="top-center"
                 key={stat.label}
                 className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center"

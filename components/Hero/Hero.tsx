@@ -7,7 +7,10 @@ import { FaGithub } from "react-icons/fa6";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen bg-[radial-gradient(circle_476px_at_54.8%_51.5%,rgba(168,229,253,1)_0%,rgba(244,244,254,1)_42.3%,rgba(244,244,254,1)_100.2%)] flex items-center justify-center overflow-hidden dark:bg-[radial-gradient(circle_farthest-corner_at_50.3%_47.3%,rgba(113,42,92,1)_0.1%,rgba(40,25,46,1)_90%)]">
+    <div
+      id="hero"
+      className="relative min-h-screen bg-[radial-gradient(circle_476px_at_54.8%_51.5%,rgba(168,229,253,1)_0%,rgba(244,244,254,1)_42.3%,rgba(244,244,254,1)_100.2%)] flex items-center justify-center overflow-hidden dark:bg-[radial-gradient(circle_farthest-corner_at_50.3%_47.3%,rgba(113,42,92,1)_0.1%,rgba(40,25,46,1)_90%)]"
+    >
       {/* 内容 */}
       <div className="relative z-10 text-center">
         {/* 子标题 */}
@@ -64,13 +67,17 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button size={"lg"} asChild className="w-fit mx-auto sm:mx-0">
-            <a href="#_">
+            <a
+              href="https://github.com/JimmyLJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub className="w-5 h-5 mr-2" />
               查看项目
             </a>
           </Button>
           <Button size={"lg"} asChild className="w-fit mx-auto sm:mx-0">
-            <a href="#_">
+            <a href="/liji_fullstack_CV.pdf" download="李觊-全栈开发工程师.pdf">
               <Download className="w-5 h-5 mr-2" />
               下载简历
             </a>

@@ -4,7 +4,7 @@ import SectionHeading from "../Helper/SectionHeading";
 
 export default function Experience() {
   return (
-    <div className="py-16 bg-gray-100 dark:bg-gray-950">
+    <div id="experience" className="py-16 bg-gray-100 dark:bg-gray-950">
       <SectionHeading
         title_1="经验 & "
         title_2="履历"

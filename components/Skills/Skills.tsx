@@ -4,7 +4,7 @@ import SkillCard from "./SkillCard";
 
 export default function Skills() {
   return (
-    <div className="py-16 bg-gray-100 dark:bg-gray-950">
+    <div id="skills" className="py-16 bg-gray-100 dark:bg-gray-950">
       <SectionHeading
         title_1="技术"
         title_2="技能"

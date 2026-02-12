@@ -1,26 +1,26 @@
 export const Navlinks = [
   {
-    href: "/",
+    href: "#hero",
     name: "首页",
   },
   {
-    href: "/about",
+    href: "#about",
     name: "关于",
   },
   {
-    href: "/skills",
+    href: "#skills",
     name: "技能",
   },
   {
-    href: "/projects",
+    href: "#projects",
     name: "项目",
   },
   {
-    href: "/experience",
+    href: "#experience",
     name: "经验",
   },
   {
-    href: "/contact",
+    href: "#contact",
     name: "联系",
   },
 ]

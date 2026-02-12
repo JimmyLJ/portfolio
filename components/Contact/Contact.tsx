@@ -25,7 +25,7 @@ export default function Contact() {
   }, [state]);
 
   return (
-    <div className="py-16 bg-gray-100 dark:bg-gray-950">
+    <div id="contact" className="py-16 bg-gray-100 dark:bg-gray-950">
       <SectionHeading
         title_1="联系"
         title_2="我"
@@ -49,11 +49,9 @@ export default function Contact() {
             <div className="space-y-4">
               {contactInfo.map((item) => {
                 return (
-                  <a
-                    href={item.href}
+                  <div
                     key={item.label}
-                    target="_blank"
-                    className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group cursor-default"
                   >
                     <div className="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
                       <item.icon className="w-5 h-5 text-blue-500 dark:text-white" />
@@ -64,7 +62,7 @@ export default function Contact() {
                       </p>
                       <p className="font-medium">{item.value}</p>
                     </div>
-                  </a>
+                  </div>
                 );
               })}
             </div>
