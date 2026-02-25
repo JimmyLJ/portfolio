@@ -4,7 +4,10 @@ import { highlights, stats } from "@/data";
 
 export default function About() {
   return (
-    <div id="about" className="py-16 bg-gray-100 dark:bg-gray-900">
+    <div
+      id="about"
+      className="py-16 bg-gray-100 dark:bg-gray-900 scroll-mt-[12vh]"
+    >
       {/* 区域标题 */}
       <SectionHeading
         title_1="关于"
@@ -13,12 +16,7 @@ export default function About() {
       />
       <div className="grid w-[80%] mx-auto lg:grid-cols-2 gap-12 items-center">
         {/* 照片 */}
-        <div
-          data-aos="fade-right"
-          data-aos-delay="0"
-          data-aos-anchor-placement="top-center"
-          className="relative"
-        >
+        <div data-aos="fade-right" data-aos-delay="0" className="relative">
           <div className="aspect-square rounded-2xl overflow-hidden p-2">
             <Image
               src={"/images/user.jpg"}
@@ -30,12 +28,7 @@ export default function About() {
           </div>
         </div>
         {/* 内容 */}
-        <div
-          data-aos="fade-left"
-          data-aos-delay="150"
-          data-aos-anchor-placement="top-center"
-          className="space-y-6"
-        >
+        <div data-aos="fade-left" data-aos-delay="150" className="space-y-6">
           <h3 className="text-2xl font-semibold">
             一位以结果为导向的全栈开发工程师
           </h3>
