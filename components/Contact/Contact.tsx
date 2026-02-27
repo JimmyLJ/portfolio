@@ -1,29 +1,7 @@
-"use client";
-
-import { useActionState, useRef, useEffect } from "react";
 import { contactInfo, socialLinks } from "../../data";
 import SectionHeading from "../Helper/SectionHeading";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
-import { Send, Loader2, CheckCircle2, XCircle } from "lucide-react";
-import { sendMessage, type ContactFormState } from "../../app/actions/contact";
 
 export default function Contact() {
-  const [state, formAction, isPending] = useActionState<
-    ContactFormState,
-    FormData
-  >(sendMessage, null);
-
-  const formRef = useRef<HTMLFormElement>(null);
-
-  // 发送成功后清空表单
-  useEffect(() => {
-    if (state?.success) {
-      formRef.current?.reset();
-    }
-  }, [state]);
-
   return (
     <div id="contact" className="py-16 bg-gray-100 dark:bg-gray-950">
       <SectionHeading
@@ -32,7 +10,7 @@ export default function Contact() {
         description="如果您有项目合作的构思，或者只是想交流技术、交个朋友？我随时欢迎。期待收到您的消息！"
       />
       <div className="w-[80%] mx-auto mt-16">
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="max-w-xl mx-auto">
           {/* 联系信息 */}
           <div
             data-aos="fade-right"
@@ -84,112 +62,6 @@ export default function Contact() {
                 })}
               </div>
             </div>
-          </div>
-          {/* 联系表单 */}
-          <div
-            data-aos="fade-left"
-            data-aos-delay="150"
-            data-aos-anchor-placement="top-center"
-          >
-            <form
-              ref={formRef}
-              action={formAction}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 space-y-6"
-            >
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    姓名
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="您的姓名"
-                    required
-                    disabled={isPending}
-                    className="bg-gray-100"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    邮箱地址
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="yourname@example.com"
-                    required
-                    disabled={isPending}
-                    className="bg-gray-100"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-medium">
-                  主题
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  placeholder="项目咨询"
-                  required
-                  disabled={isPending}
-                  className="bg-gray-100"
-                />
-              </div>
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium">
-                  留言内容
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  placeholder="请描述您的需求或想对我说的话..."
-                  rows={5}
-                  required
-                  disabled={isPending}
-                  className="bg-gray-100 h-40"
-                />
-              </div>
-
-              {/* 状态提示 */}
-              {state && (
-                <div
-                  className={`flex items-center gap-2 p-3 rounded-lg text-sm ${
-                    state.success
-                      ? "bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-400"
-                      : "bg-red-50 text-red-700 dark:bg-red-900/20 dark:text-red-400"
-                  }`}
-                >
-                  {state.success ? (
-                    <CheckCircle2 className="w-4 h-4 shrink-0" />
-                  ) : (
-                    <XCircle className="w-4 h-4 shrink-0" />
-                  )}
-                  {state.message}
-                </div>
-              )}
-
-              <Button
-                type="submit"
-                size={"lg"}
-                disabled={isPending}
-                className="w-full cursor-pointer"
-              >
-                {isPending ? (
-                  <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    正在发送...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4 mr-2" />
-                    发送消息
-                  </>
-                )}
-              </Button>
-            </form>
           </div>
         </div>
       </div>
