@@ -93,12 +93,12 @@ export const skillCategories = [
   {
     title: "工具",
     skills: [
+      { name: "Claude Code", icon: Cpu },
+      { name: "Cursor", icon: Palette },
       { name: "Git", icon: GitBranch },
       { name: "Docker", icon: Server },
       { name: "阿里云", icon: Cloud },
       { name: "Linux", icon: Terminal },
-      { name: "Figma", icon: Palette },
-      { name: "CI/CD", icon: Cpu },
     ],
   },
 ];
@@ -121,7 +121,7 @@ export const experiences = [
     type: "work",
     title: "个人接单",
     company: "自由职业",
-    period: "2024 - 现在",
+    period: "2025 - 现在",
     description:
       "自由职业期间利用 AI 编程工具链，高效完成几个全栈产品的设计开发与落地。",
     technologies: ["React", "Vue", "Hono", "PostgreSQL", "阿里云", "AI Coding"],

@@ -68,7 +68,7 @@ export default function Nav({ openNav }: Props) {
           {/* 下载简历 */}
           <a
             href="/liji_fullstack_CV.pdf"
-            download="李觊-全栈开发工程师.pdf"
+            download="李觊-10年经验-全栈开发工程师.pdf"
             className="box-border
             relative z-20 inline-flex items-center justify-center w-auto px-6 sm:px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-offset-gray-200 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
           >

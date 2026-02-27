@@ -43,7 +43,7 @@ export default function Hero() {
               2000,
               "做过APP应用开发",
               2000,
-              "做过独立站",
+              "做过小程序",
               2000,
             ]}
             wrapper="span"
@@ -58,7 +58,7 @@ export default function Hero() {
           className="text-lg text-muted-foreground dark:text-gray-200 max-w-2xl mx-auto mb-10"
         >
           全栈开发专家 |
-          深耕现代技术栈，匠心打造卓越数字体验。具备极强的工程实践能力，确保项目从需求到交付的高质量落地。
+          擅长独立开发，熟练使用AI工具。具备极强的工程实践能力，确保项目从需求到交付的高质量落地。
         </p>
         {/* 按钮 */}
         <div

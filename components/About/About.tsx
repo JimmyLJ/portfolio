@@ -30,14 +30,15 @@ export default function About() {
         {/* 内容 */}
         <div data-aos="fade-left" data-aos-delay="150" className="space-y-6">
           <h3 className="text-2xl font-semibold">
-            一位以结果为导向的全栈开发工程师
+            一名以结果为导向的全栈开发工程师
           </h3>
           <p className="text-muted-foreground leading-relaxed">
             我是一名拥有 10 年以上经验的全栈开发工程师，擅长 Web、App
-            应用的设计与工程化落地。曾从零构建并长期维护多套业务系统，熟悉从需求分析、技术选型到上线与持续迭代的完整流程。
+            应用的设计与工程化落地。曾从零到一开发多个项目，熟悉从需求分析、技术选型到上线与持续迭代的完整流程。
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            相比追逐短期的技术热度，我更重视工程质量与实际效果。通过严谨的设计、清晰的代码结构和持续的技术积累，我致力于为团队和业务交付可靠、可控、经得起时间考验的系统。
+            React, Vue 技术栈都开发过完整的项目，早些年也做过APP和小程序。基本上一个人就是一个团队。
+            我致力于为团队和业务交付可靠、可控、经得起时间考验的系统。
           </p>
           {/* 强调 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
