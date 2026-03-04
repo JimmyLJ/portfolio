@@ -113,6 +113,15 @@ export const projects = [
     demoUrl: "/",
     githubUrl: "https://github.com/JimmyLJ/portfolio",
   },
+  {
+    title: "PMS项目管理网站",
+    description:
+      "使用 Vite + React 开发的一个项目管理网站，展示一个多租户的SaaS系统。",
+    image: "/images/p2.png",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "PostgreSQL", "Node.js", "hono"],
+    demoUrl: "https://pms.jimmylee.top",
+    githubUrl: "https://github.com/JimmyLJ/pms",
+  },
 ];
 
 

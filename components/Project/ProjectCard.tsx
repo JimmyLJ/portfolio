@@ -38,7 +38,7 @@ const ProjectCard = ({
         <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
           {description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-2 mb-6 h-14 content-start overflow-hidden">
           {techStack.map((tech) => {
             return (
               <span
